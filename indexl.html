@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-200">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>writing</title>
+    <link rel="shortcut icon" href="../asset/favicon.svg" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1c57f54be0.js"></script>
+  </head>
+  <body>
+    <h1 class="text-center mt-6 text-4xl font-medium">
+      Welcome to <span class="text-indigo-500">writing</span>
+    </h1>
+    <main class="bg-white w-[65%] mx-auto rounded-md mt-8 p-3.5">
+      <header class="flex items-center flex-wrap gap-2 justify-between">
+        <div class="flex justify-between items-center gap-3">
+          <button
+            id="bold"
+            onclick="fontStyle('bold')"
+            class="py-1 px-2.5 rounded"
+          >
+            <i class="fa-solid fa-bold cursor-pointer"></i>
+          </button>
+          <button
+            id="italic"
+            onclick="fontStyle('italic')"
+            class="py-1 px-2.5 rounded"
+          >
+            <i class="fa-solid fa-italic cursor-pointer"></i>
+          </button>
+          <button
+            id="underline"
+            onclick="fontStyle('underline')"
+            class="py-1 px-2.5 rounded"
+          >
+            <i class="fa-solid fa-underline cursor-pointer"></i>
+          </button>
+        </div>
+        <div class="flex justify-between items-center gap-4">
+          <button
+            id="left"
+            onclick="alignStyle('left')"
+            class="py-1 px-2.5 rounded"
+          >
+            <i class="fa-solid fa-align-left cursor-pointer"></i>
+          </button>
+
+          <button
+            id="center"
+            onclick="alignStyle('center')"
+            class="py-1 px-2.5 rounded"
+          >
+            <i class="fa-solid fa-align-center cursor-pointer"></i>
+          </button>
+          <button
+            id="right"
+            onclick="alignStyle('right')"
+            class="py-1 px-2.5 rounded"
+          >
+            <i class="fa-solid fa-align-right cursor-pointer"></i>
+          </button>
+          <button
+            id="justify"
+            onclick="alignStyle('justify')"
+            class="py-1 px-2.5 rounded"
+          >
+            <i class="fa-solid fa-align-justify cursor-pointer"></i>
+          </button>
+        </div>
+        <div class="flex justify-between items-center gap-4">
+          <input
+            id="number"
+            value="16"
+            min="1"
+            max="100"
+            type="number"
+            class="relative block w-full appearance-none rounded border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+          />
+          <button onclick="textTransForm()" class="py-1 px-2.5 rounded">
+            <span class="font-semibold text-lg cursor-pointer">aA</span>
+          </button>
+          <input
+            id="color"
+            title="this is color picker you can choose any color"
+            type="color"
+            class="relative block w-full appearance-none rounded px-3 py-1.5 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+          />
+        </div>
+      </header>
+
+      <section class="border-t mt-2.5">
+        <textarea
+          rows="10"
+          class="h-52 md:h-80 relative resize-none block w-full appearance-none rounded border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+          id="textarea"
+        ></textarea>
+      </section>
+    </main>
+    <footer class="w-[65%] mx-auto mt-8">
+      <p class="text-center text-indigo-500 font-normal">
+       
+      </p>
+    </footer>
+
+    <!-- link a index js file -->
+    <script src="rere.js"></script>
+  </body>
+</html>
